@@ -1,4 +1,4 @@
 title: Secure Real Time Multiplayer Game 
 description: A simplee game
-baseurl: ".views" # the subpath of your site, e.g. /blog
+baseurl: "/views" # the subpath of your site, e.g. /blog
 url: "https://teon13.github.io" # the base hostname & protocol for your site
