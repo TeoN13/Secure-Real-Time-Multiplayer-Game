@@ -24,6 +24,8 @@ app.use(nocache());
 
 app.use(function(req, res, next) {
   res.setHeader('X-Powered-By', 'PHP 7.4.3');
+  res.setHeader('Access-Control-Allow-Origin', 'https://teon13.github.io');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
   next();
 });
 
