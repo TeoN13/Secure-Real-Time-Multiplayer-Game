@@ -1,7 +1,7 @@
 import Player from './Player.mjs';
 import Collectible from './Collectible.mjs';
 
-const socket = io();
+const socket = io("https://secure-real-time-multiplayer-game.onrender.com");
 const canvas = document.getElementById('game-window');
 const context = canvas.getContext('2d');
 const score = document.getElementById('score');
