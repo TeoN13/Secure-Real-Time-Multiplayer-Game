@@ -71,7 +71,13 @@ let game = {
   players, collectible
 }
 
-const io = socket(server)
+const io = socket(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  }
+});
+
 io.on('connection', (socket) => {
 
   console.log('User connected to server with id:', socket.id)
