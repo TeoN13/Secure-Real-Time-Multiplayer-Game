@@ -24,6 +24,7 @@ const player = new Player({
   size: playerDimension,
   icon: playerIcons[Math.floor(Math.random() * playerIcons.length)]
 })
+console.log('Made new player!', player);
 
 // VAriabled for displaying player rank
 let playerRank = null
