@@ -25,9 +25,14 @@ app.use(nocache());
 app.use(function(req, res, next) {
   res.setHeader('X-Powered-By', 'PHP 7.4.3');
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
   next();
 });
+
 
 //For FCC testing purposes and enables user to connect from outside the hosting platform
 app.use(cors({ origin: '*' }));
